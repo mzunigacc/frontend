@@ -122,15 +122,15 @@ footer a {
     #productos > ul {
         grid-template-columns: 1fr 1fr;
     }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 480px) {
     #productos > ul {
         grid-template-columns: 1fr;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
