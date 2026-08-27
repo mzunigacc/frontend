@@ -70,7 +70,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-#productos ul {
+#productos > ul {
     list-style: none;
     padding: 0;
     display: grid;
@@ -82,12 +82,26 @@ nav a:hover {
     background-color: var(--color-tarjeta);
     padding: 20px;
     border: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
 }
 
 .producto img {
     width: 100%;
     max-width: 500px;
     height: auto;
+}
+
+.producto p {
+    margin-top: auto;
+}
+
+.footer-info p {
+    margin-bottom: 1rem;
+}
+
+.footer-info p:last-child {
+    margin-bottom: 0;
 }
 
 footer {
