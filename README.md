@@ -1,39 +1,58 @@
-# Frontend S2 - Tienda Gamer
+# Desarrollo Frontend I - Tienda Gamer
 
-Actividad formativa correspondiente a la Semana 2 de Frontend.
+Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)**.
 
-El proyecto continúa la página desarrollada en la Semana 1, incorporando estilos CSS y principios básicos de diseño responsivo.
+El sitio corresponde a una tienda de videojuegos y ha evolucionado durante las actividades de las primeras semanas del curso, incorporando progresivamente estructura HTML, estilos CSS y diseño responsivo.
 
-## Tecnologías utilizadas
+## Semana 3 - Diseño responsivo
 
-- HTML5
-- CSS3
-- Visual Studio Code
-- Git y GitHub
-- GitHub Pages
+Durante la Semana 3 se incorporaron y reforzaron los siguientes conceptos:
 
-## Implementación
-
-Durante la actividad se trabajó con:
-
+- HTML semántico.
 - Hoja de estilos CSS externa.
-- Selectores de elementos, clases e identificadores.
-- Box model: `margin`, `padding` y `border`.
-- `box-sizing: border-box`.
-- Colores y tipografía.
-- Dimensiones relativas con `width` y `max-width`.
+- Modelo de cajas y `box-sizing: border-box`.
+- Variables CSS mediante `:root`.
+- Tamaños tipográficos relativos con `rem`.
+- Selectores de clase, ID, hijo directo y pseudo-clases.
+- Flexbox para navegación, footer y estructura interna de productos.
+- CSS Grid para la distribución del catálogo.
+- Media queries para adaptar el diseño a escritorio, tablet y móvil.
 - Imágenes responsivas.
-- Pseudo-clases para elementos interactivos.
-- Estilos para `header`, navegación, productos y `footer`.
+
+### Comportamiento responsivo
+
+- **Escritorio:** 3 productos por fila.
+- **Tablet:** 2 productos por fila.
+- **Móvil:** 1 producto por fila.
+- El footer cambia su distribución mediante Flexbox según el ancho disponible.
 
 ## Validaciones
 
-El proyecto fue probado mediante:
+El sitio fue validado mediante:
 
-- Live Server durante el desarrollo.
-- DevTools para inspección de estilos y pruebas responsive.
-- Pruebas en distintos tamaños de pantalla.
-- Pruebas en distintos navegadores.
-- Pruebas en computadores y dispositivos móviles reales.
+- DevTools en distintas resoluciones.
+- Pruebas en Chrome y Microsoft Edge.
+- Visualización responsive en escritorio, tablet y móvil.
+- Publicación mediante GitHub Pages.
 
-El sitio se encuentra publicado mediante GitHub Pages.
+## Evidencias
+
+### Escritorio - 1000 px
+
+![Vista escritorio](evidencias/01-desktop-1000.png)
+
+### Tablet - 700 px
+
+![Vista tablet](evidencias/02-tablet-700.png)
+
+### Móvil - 400 px
+
+![Vista móvil](evidencias/03-mobile-400.png)
+
+### Footer responsivo
+
+![Footer responsivo](evidencias/04-footer-responsive.png)
+
+### Validación cross-browser en Edge
+
+![Prueba en Microsoft Edge](evidencias/05-cross-browser-edge.png)
