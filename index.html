@@ -17,14 +17,19 @@
 
     <header>
         <h1>Tienda Gamer</h1>
-        <p>Encuentra videojuegos para distintas plataformas y estilos de juego.</p>
+
+        <p>
+            Encuentra videojuegos para distintas plataformas y estilos de juego.
+        </p>
     </header>
 
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="#inicio">Tienda Gamer</a>
+            <a class="navbar-brand" href="#inicio">
+                Tienda Gamer
+            </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
                 aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar navegación">
@@ -33,17 +38,25 @@
 
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Inicio</a>
+                        <a class="nav-link" href="#inicio">
+                            Inicio
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#productos">Productos</a>
+                        <a class="nav-link" href="#productos">
+                            Productos
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
+                        <a class="nav-link" href="#contacto">
+                            Contacto
+                        </a>
                     </li>
+
                 </ul>
             </div>
 
@@ -52,6 +65,7 @@
 
     <!-- Carrusel de productos destacados -->
     <div class="container my-4">
+
         <section id="carruselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
             <div class="carousel-inner">
@@ -82,51 +96,99 @@
                 aria-label="Imagen siguiente">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
+
         </section>
+
     </div>
 
     <main id="inicio">
-        <section id="productos">
 
-            <h2 class="text-center">Productos destacados</h2>
+        <section id="productos" class="container">
 
-            <p>
+            <h2 class="text-center">
+                Productos destacados
+            </h2>
+
+            <p class="text-center">
                 Revisa algunos de los videojuegos destacados disponibles en nuestra tienda.
             </p>
 
-            <ul>
-                <li class="producto">
-                    <h3>Hollow Knight: Silksong</h3>
+            <!-- Grid de productos -->
+            <div class="row g-4">
 
-                    <img src="img/silksong.jpg" alt="Portada del videojuego Hollow Knight Silksong">
+                <div class="col-12 col-md-6 col-lg-4">
 
-                    <p>
-                        Explora un nuevo reino en una aventura de acción y plataformas.
-                    </p>
-                </li>
+                    <div class="card h-100 bg-dark text-light border-secondary">
 
-                <li class="producto">
-                    <h3>The Witcher 3: Wild Hunt</h3>
+                        <img src="img/silksong.jpg" class="card-img-top"
+                            alt="Portada del videojuego Hollow Knight Silksong">
 
-                    <img src="img/thewitcher.jpg" alt="Portada del videojuego The Witcher 3 Wild Hunt">
+                        <div class="card-body">
 
-                    <p>
-                        Explora un mundo abierto como Geralt de Rivia, un brujo cazador de monstruos.
-                    </p>
-                </li>
+                            <h3 class="card-title">
+                                Hollow Knight: Silksong
+                            </h3>
 
-                <li class="producto">
-                    <h3>Mass Effect Legendary Edition</h3>
+                            <p class="card-text">
+                                Explora un nuevo reino en una aventura de acción y plataformas.
+                            </p>
 
-                    <img src="img/masseffect.jpg" alt="Portada del videojuego Mass Effect Legendary Edition">
+                        </div>
 
-                    <p>
-                        Entra a la batalla por el universo.
-                    </p>
-                </li>
-            </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card h-100 bg-dark text-light border-secondary">
+
+                        <img src="img/thewitcher.jpg" class="card-img-top"
+                            alt="Portada del videojuego The Witcher 3 Wild Hunt">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                The Witcher 3: Wild Hunt
+                            </h3>
+
+                            <p class="card-text">
+                                Explora un mundo abierto como Geralt de Rivia, un brujo cazador de monstruos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="card h-100 bg-dark text-light border-secondary">
+
+                        <img src="img/masseffect.jpg" class="card-img-top"
+                            alt="Portada del videojuego Mass Effect Legendary Edition">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Mass Effect Legendary Edition
+                            </h3>
+
+                            <p class="card-text">
+                                Entra a la batalla por el universo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
+
     </main>
 
     <footer id="contacto">
@@ -134,15 +196,21 @@
         <h2>Contacto</h2>
 
         <div class="footer-info">
+
             <p>
                 ¿Tienes alguna consulta? Contáctanos en
-                <a href="mailto:contacto@tiendagamer.cl">contacto@tiendagamer.cl</a>
+                <a href="mailto:contacto@tiendagamer.cl">
+                    contacto@tiendagamer.cl
+                </a>
             </p>
 
             <p>
                 Síguenos en
-                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    Instagram
+                </a>
             </p>
+
         </div>
 
     </footer>
