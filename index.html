@@ -7,16 +7,10 @@
     <title>Tienda de Videojuegos</title>
 
     <!-- Bootstrap 5 CSS -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Estilos personalizados -->
-    <link
-        rel="stylesheet"
-        href="css/Matias_Zuniga_PFY2201_CSS_Semana3.css"
-    >
+    <link rel="stylesheet" href="css/Matias_Zuniga_PFY2201_CSS_Semana4.css">
 </head>
 
 <body>
@@ -26,44 +20,70 @@
         <p>Encuentra videojuegos para distintas plataformas y estilos de juego.</p>
     </header>
 
+    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
+        <div class="container-fluid">
 
-        <a class="navbar-brand" href="#inicio">Tienda Gamer</a>
+            <a class="navbar-brand" href="#inicio">Tienda Gamer</a>
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal"
-            aria-controls="menuPrincipal"
-            aria-expanded="false"
-            aria-label="Mostrar navegación"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div
-            class="collapse navbar-collapse"
-            id="menuPrincipal"
-        >
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#inicio">Inicio</a>
-                </li>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#productos">Productos</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
+    </nav>
 
+    <!-- Carrusel de productos destacados -->
+    <div class="container my-4">
+        <section id="carruselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="img/silksong.jpg" class="d-block w-100"
+                        alt="Portada del videojuego Hollow Knight Silksong">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/thewitcher.jpg" class="d-block w-100"
+                        alt="Portada del videojuego The Witcher 3 Wild Hunt">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/masseffect.jpg" class="d-block w-100"
+                        alt="Portada del videojuego Mass Effect Legendary Edition">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselProductos" data-bs-slide="prev"
+                aria-label="Imagen anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselProductos" data-bs-slide="next"
+                aria-label="Imagen siguiente">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </section>
     </div>
-</nav>
 
     <main id="inicio">
         <section id="productos">
@@ -78,10 +98,7 @@
                 <li class="producto">
                     <h3>Hollow Knight: Silksong</h3>
 
-                    <img
-                        src="img/silksong.jpg"
-                        alt="Portada del videojuego Hollow Knight Silksong"
-                    >
+                    <img src="img/silksong.jpg" alt="Portada del videojuego Hollow Knight Silksong">
 
                     <p>
                         Explora un nuevo reino en una aventura de acción y plataformas.
@@ -91,10 +108,7 @@
                 <li class="producto">
                     <h3>The Witcher 3: Wild Hunt</h3>
 
-                    <img
-                        src="img/thewitcher.jpg"
-                        alt="Portada del videojuego The Witcher 3 Wild Hunt"
-                    >
+                    <img src="img/thewitcher.jpg" alt="Portada del videojuego The Witcher 3 Wild Hunt">
 
                     <p>
                         Explora un mundo abierto como Geralt de Rivia, un brujo cazador de monstruos.
@@ -104,10 +118,7 @@
                 <li class="producto">
                     <h3>Mass Effect Legendary Edition</h3>
 
-                    <img
-                        src="img/masseffect.jpg"
-                        alt="Portada del videojuego Mass Effect Legendary Edition"
-                    >
+                    <img src="img/masseffect.jpg" alt="Portada del videojuego Mass Effect Legendary Edition">
 
                     <p>
                         Entra a la batalla por el universo.
@@ -137,8 +148,7 @@
     </footer>
 
     <!-- Bootstrap 5 JavaScript -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
 
 </body>
