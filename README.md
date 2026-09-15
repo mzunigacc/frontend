@@ -6,6 +6,111 @@ El proyecto corresponde a una tienda ficticia de videojuegos denominada **Tienda
 
 ---
 
+## Semana 5 - Manipulación del DOM e interactividad con JavaScript
+
+Durante la Semana 5 se incorporó **JavaScript** al proyecto desarrollado durante las semanas anteriores, agregando manipulación dinámica del DOM, eventos de usuario y carga de datos mediante la **Fetch API**.
+
+### Implementaciones principales
+
+- Incorporación de un archivo JavaScript externo.
+- Selección y manipulación de elementos del DOM.
+- Creación dinámica de elementos mediante `createElement()`.
+- Incorporación de elementos al DOM mediante `appendChild()`.
+- Creación dinámica de una tarjeta de oferta semanal.
+- Implementación del evento `click`.
+- Implementación del evento `mouseover`.
+- Implementación del evento `mouseout`.
+- Implementación del evento `submit`.
+- Uso de `preventDefault()` para controlar el envío del formulario.
+- Modificación dinámica de contenido mediante `textContent`.
+- Incorporación de un formulario de contacto interactivo.
+- Uso de la Fetch API para obtener información desde un archivo JSON.
+- Conversión de la respuesta obtenida mediante `response.json()`.
+- Generación dinámica de productos a partir de los datos obtenidos.
+- Manejo de promesas mediante `.then()`.
+- Manejo de errores mediante `.catch()`.
+- Organización del código JavaScript mediante funciones con responsabilidades específicas.
+- Incorporación de comentarios en las funciones principales.
+
+### Manipulación del DOM
+
+JavaScript genera dinámicamente una sección de oferta semanal utilizando:
+
+```javascript
+document.createElement()
+appendChild()
+```
+
+La tarjeta creada permite demostrar la modificación del DOM sin mantener todo su contenido definido directamente en el archivo HTML.
+
+### Eventos implementados
+
+Se incorporaron distintos eventos para mejorar la interactividad de la página:
+
+| Evento | Comportamiento |
+|---|---|
+| `click` | Modifica el mensaje de la oferta semanal |
+| `mouseover` | Aumenta ligeramente el tamaño de la tarjeta |
+| `mouseout` | Devuelve la tarjeta a su tamaño original |
+| `submit` | Procesa el formulario y muestra un mensaje de confirmación |
+
+El formulario utiliza `preventDefault()` para evitar el comportamiento predeterminado del envío y permitir que JavaScript controle la interacción.
+
+### Fetch API
+
+Se incorporó un catálogo adicional cuyos datos son obtenidos desde el archivo:
+
+```text
+productos.json
+```
+
+La carga de información sigue el siguiente flujo:
+
+```text
+productos.json
+      │
+      ▼
+   Fetch API
+      │
+      ▼
+ response.json()
+      │
+      ▼
+mostrarProductos()
+      │
+      ▼
+     DOM
+```
+
+Los datos obtenidos son procesados mediante JavaScript y cada producto es incorporado dinámicamente a la página utilizando elementos creados mediante `createElement()` y `appendChild()`.
+
+También se implementó manejo de errores mediante `.catch()` en caso de que el recurso no pueda ser cargado.
+
+---
+
+## Evidencias Semana 5
+
+Se realizaron pruebas para comprobar las funcionalidades incorporadas mediante JavaScript.
+
+Las capturas correspondientes se encuentran almacenadas en la carpeta `evidencias/`:
+
+- `semana5-dom-evento-click.png`
+- `semana5-submit.png`
+- `semana5-fetch.png`
+
+Las pruebas permiten verificar:
+
+- Creación dinámica de contenido mediante JavaScript.
+- Funcionamiento del evento `click`.
+- Funcionamiento del evento `mouseover`.
+- Procesamiento del evento `submit`.
+- Modificación dinámica del contenido.
+- Carga de datos mediante Fetch API.
+- Generación dinámica del catálogo desde un archivo JSON.
+- Funcionamiento del proyecto desplegado mediante GitHub Pages.
+
+---
+
 ## Semana 4 - Diseño responsivo con Bootstrap 5
 
 Durante la Semana 4 se incorporó **Bootstrap 5** al proyecto desarrollado durante las semanas anteriores, utilizando sus componentes y sistema de cuadrículas para complementar el diseño responsivo existente.
@@ -70,6 +175,9 @@ Las pruebas permiten verificar:
 
 - HTML5
 - CSS3
+- JavaScript
+- JSON
+- Fetch API
 - Bootstrap 5
 - Git
 - GitHub
@@ -86,8 +194,14 @@ frontend/
 │   ├── Matias_Zuniga_PFY2201_CSS_Semana3.css
 │   └── Matias_Zuniga_PFY2201_CSS_Semana4.css
 ├── evidencias/
+│   ├── semana5-dom-evento-click.png
+│   ├── semana5-fetch.png
+│   └── semana5-submit.png
 ├── img/
+├── js/
+│   └── Matias_Zuniga_PFY2201_DOM_Semana5.js
 ├── index.html
+├── productos.json
 └── README.md
 ```
 
@@ -97,18 +211,24 @@ frontend/
 
 El desarrollo se mantiene mediante Git y GitHub.
 
-Cada semana de trabajo se desarrolla en una rama independiente antes de integrar su estado final a `main`.
+Cada semana de trabajo se integra progresivamente al proyecto y su estado final se identifica mediante tags de entrega.
 
-Para la Semana 4 se utilizó la rama:
-
-```text
-s4
-```
-
-El estado final de la actividad se identifica mediante el tag:
+El estado final de la Semana 4 se identifica mediante:
 
 ```text
 s4-entrega
 ```
 
-La versión publicada del proyecto se mantiene mediante GitHub Pages.
+El estado funcional de la Semana 5 se identifica mediante:
+
+```text
+s5-entrega
+```
+
+La versión pública del proyecto se mantiene mediante GitHub Pages desde la rama `main`.
+
+## Proyecto publicado
+
+La aplicación se encuentra desplegada públicamente mediante GitHub Pages:
+
+https://mzunigacc.github.io/frontend/
