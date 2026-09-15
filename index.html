@@ -113,6 +113,9 @@
                 Revisa algunos de los videojuegos destacados disponibles en nuestra tienda.
             </p>
 
+            <!-- Contenido dinámico generado con JavaScript -->
+            <div id="productoDinamico" class="mb-4"></div>
+
             <!-- Grid de productos -->
             <div class="row g-4">
 
@@ -189,6 +192,21 @@
 
         </section>
 
+        <!-- Productos cargados mediante Fetch API -->
+        <section class="container my-5">
+
+            <h2 class="text-center">
+                Catálogo cargado con Fetch API
+            </h2>
+
+            <p class="text-center">
+                Estos productos se cargan dinámicamente desde un archivo JSON.
+            </p>
+
+            <div id="catalogoFetch" class="row g-4"></div>
+
+        </section>
+
     </main>
 
     <footer id="contacto">
@@ -213,11 +231,31 @@
 
         </div>
 
+        <!-- Formulario de contacto -->
+        <form id="formContacto" class="container mt-3">
+
+            <label for="nombre" class="form-label">
+                Nombre
+            </label>
+
+            <input type="text" id="nombre" class="form-control mb-2" placeholder="Ingresa tu nombre" required>
+
+            <button type="submit" class="btn btn-primary">
+                Enviar consulta
+            </button>
+
+            <p id="mensajeFormulario" class="mt-2"></p>
+
+        </form>
+
     </footer>
 
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
+
+    <!-- JavaScript Semana 5 -->
+    <script src="js/Matias_Zuniga_PFY2201_DOM_Semana5.js"></script>
 
 </body>
 
