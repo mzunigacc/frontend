@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Hollow Knight: Silksong",
+        "plataforma": "PC / PlayStation / Xbox",
+        "precio": 24990,
+        "imagen": "assets/img/silksong.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "The Witcher 3: Wild Hunt",
+        "plataforma": "PC",
+        "precio": 29990,
+        "imagen": "assets/img/thewitcher.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Mass Effect Legendary Edition",
+        "plataforma": "PlayStation / Xbox",
+        "precio": 34990,
+        "imagen": "assets/img/masseffect.jpg"
+    }
+]

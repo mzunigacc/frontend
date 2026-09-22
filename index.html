@@ -4,39 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Videojuegos</title>
+
+    <title>Tienda Gamer</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/Matias_Zuniga_PFY2201_CSS_Semana4.css">
+    <link rel="stylesheet" href="assets/css/Matias_Zuniga_PFY2201_CSS_Semana4.css">
 </head>
 
 <body>
 
-    <header>
+    <!-- Encabezado principal -->
+    <header id="inicio">
+
         <h1>Tienda Gamer</h1>
 
         <p>
             Encuentra videojuegos para distintas plataformas y estilos de juego.
         </p>
+
     </header>
+
 
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark">
+
         <div class="container-fluid">
 
             <a class="navbar-brand" href="#inicio">
                 Tienda Gamer
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar navegación">
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Mostrar navegación">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
             <div class="collapse navbar-collapse" id="menuPrincipal">
+
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
@@ -46,8 +60,32 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#productos">
+                        <a class="nav-link" id="mostrarTodos" href="#productos">
                             Productos
+                        </a>
+                    </li>
+
+                    <!-- Categoría simulada PC -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            id="categoriaPC"
+                            href="#productos">
+                            PC
+                        </a>
+                    </li>
+
+                    <!-- Categoría simulada Consolas -->
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            id="categoriaConsolas"
+                            href="#productos">
+                            Consolas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carrito">
+                            Carrito
                         </a>
                     </li>
 
@@ -58,157 +96,183 @@
                     </li>
 
                 </ul>
+
             </div>
 
         </div>
+
     </nav>
+
 
     <!-- Carrusel de productos destacados -->
     <div class="container my-4">
 
-        <section id="carruselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <section id="carruselProductos"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="3000">
 
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
-                    <img src="img/silksong.jpg" class="d-block w-100"
+
+                    <img src="assets/img/silksong.jpg"
+                        class="d-block w-100"
                         alt="Portada del videojuego Hollow Knight Silksong">
+
                 </div>
 
                 <div class="carousel-item">
-                    <img src="img/thewitcher.jpg" class="d-block w-100"
+
+                    <img src="assets/img/thewitcher.jpg"
+                        class="d-block w-100"
                         alt="Portada del videojuego The Witcher 3 Wild Hunt">
+
                 </div>
 
                 <div class="carousel-item">
-                    <img src="img/masseffect.jpg" class="d-block w-100"
+
+                    <img src="assets/img/masseffect.jpg"
+                        class="d-block w-100"
                         alt="Portada del videojuego Mass Effect Legendary Edition">
+
                 </div>
 
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carruselProductos" data-bs-slide="prev"
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carruselProductos"
+                data-bs-slide="prev"
                 aria-label="Imagen anterior">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                <span class="carousel-control-prev-icon"
+                    aria-hidden="true">
+                </span>
+
             </button>
 
-            <button class="carousel-control-next" type="button" data-bs-target="#carruselProductos" data-bs-slide="next"
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carruselProductos"
+                data-bs-slide="next"
                 aria-label="Imagen siguiente">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                <span class="carousel-control-next-icon"
+                    aria-hidden="true">
+                </span>
+
             </button>
 
         </section>
 
     </div>
 
-    <main id="inicio">
 
-        <section id="productos" class="container">
+    <main>
+
+        <!-- Oferta generada dinámicamente con JavaScript -->
+        <section class="container my-4">
+
+            <div id="productoDinamico"></div>
+
+        </section>
+
+
+        <!-- Catálogo de productos -->
+        <section id="productos" class="container my-5">
 
             <h2 class="text-center">
-                Productos destacados
+                Catálogo de videojuegos
             </h2>
 
             <p class="text-center">
-                Revisa algunos de los videojuegos destacados disponibles en nuestra tienda.
+                Explora nuestros productos y agrega tus videojuegos favoritos al carrito.
             </p>
 
-            <!-- Contenido dinámico generado con JavaScript -->
-            <div id="productoDinamico" class="mb-4"></div>
 
-            <!-- Grid de productos -->
-            <div class="row g-4">
+            <!-- Formulario de búsqueda -->
+            <form id="formBusqueda"
+                class="row g-2 justify-content-center my-4">
 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-8">
 
-                    <div class="card h-100 bg-dark text-light border-secondary">
+                    <label for="busqueda"
+                        class="visually-hidden">
+                        Buscar videojuego
+                    </label>
 
-                        <img src="img/silksong.jpg" class="card-img-top"
-                            alt="Portada del videojuego Hollow Knight Silksong">
-
-                        <div class="card-body">
-
-                            <h3 class="card-title">
-                                Hollow Knight: Silksong
-                            </h3>
-
-                            <p class="card-text">
-                                Explora un nuevo reino en una aventura de acción y plataformas.
-                            </p>
-
-                        </div>
-
-                    </div>
+                    <input type="search"
+                        id="busqueda"
+                        class="form-control"
+                        placeholder="Buscar videojuego por nombre">
 
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-auto">
 
-                    <div class="card h-100 bg-dark text-light border-secondary">
-
-                        <img src="img/thewitcher.jpg" class="card-img-top"
-                            alt="Portada del videojuego The Witcher 3 Wild Hunt">
-
-                        <div class="card-body">
-
-                            <h3 class="card-title">
-                                The Witcher 3: Wild Hunt
-                            </h3>
-
-                            <p class="card-text">
-                                Explora un mundo abierto como Geralt de Rivia, un brujo cazador de monstruos.
-                            </p>
-
-                        </div>
-
-                    </div>
+                    <button type="submit"
+                        class="btn btn-primary w-100">
+                        Buscar
+                    </button>
 
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
+            </form>
 
-                    <div class="card h-100 bg-dark text-light border-secondary">
 
-                        <img src="img/masseffect.jpg" class="card-img-top"
-                            alt="Portada del videojuego Mass Effect Legendary Edition">
+            <!-- Mensajes de búsqueda y categorías -->
+            <p id="mensajeBusqueda"
+                class="text-center"
+                aria-live="polite">
+            </p>
 
-                        <div class="card-body">
 
-                            <h3 class="card-title">
-                                Mass Effect Legendary Edition
-                            </h3>
+            <!-- Productos generados mediante Fetch API -->
+            <div id="catalogoFetch"
+                class="row g-4">
+            </div>
 
-                            <p class="card-text">
-                                Entra a la batalla por el universo.
-                            </p>
+        </section>
 
-                        </div>
 
-                    </div>
+        <!-- Carrito de compras -->
+        <section id="carrito"
+            class="container my-5">
 
-                </div>
+            <h2 class="text-center">
+                Carrito de compras
+            </h2>
+
+            <p class="text-center">
+                Resumen de los productos agregados.
+            </p>
+
+
+            <!-- Contenido dinámico del carrito -->
+            <div id="resumenCarrito"
+                class="card bg-dark text-light border-secondary p-3">
+
+                <p id="carritoVacio"
+                    class="mb-0">
+                    Tu carrito está vacío.
+                </p>
+
+                <div id="listaCarrito"></div>
+
+                <p id="totalCarrito"
+                    class="fw-bold mt-3 mb-0">
+                    Total: $0
+                </p>
 
             </div>
 
         </section>
 
-        <!-- Productos cargados mediante Fetch API -->
-        <section class="container my-5">
-
-            <h2 class="text-center">
-                Catálogo cargado con Fetch API
-            </h2>
-
-            <p class="text-center">
-                Estos productos se cargan dinámicamente desde un archivo JSON.
-            </p>
-
-            <div id="catalogoFetch" class="row g-4"></div>
-
-        </section>
-
     </main>
 
+
+    <!-- Pie de página -->
     <footer id="contacto">
 
         <h2>Contacto</h2>
@@ -217,6 +281,7 @@
 
             <p>
                 ¿Tienes alguna consulta? Contáctanos en
+
                 <a href="mailto:contacto@tiendagamer.cl">
                     contacto@tiendagamer.cl
                 </a>
@@ -224,38 +289,25 @@
 
             <p>
                 Síguenos en
-                <a href="https://www.instagram.com/" target="_blank">
+
+                <a href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     Instagram
                 </a>
             </p>
 
         </div>
 
-        <!-- Formulario de contacto -->
-        <form id="formContacto" class="container mt-3">
-
-            <label for="nombre" class="form-label">
-                Nombre
-            </label>
-
-            <input type="text" id="nombre" class="form-control mb-2" placeholder="Ingresa tu nombre" required>
-
-            <button type="submit" class="btn btn-primary">
-                Enviar consulta
-            </button>
-
-            <p id="mensajeFormulario" class="mt-2"></p>
-
-        </form>
-
     </footer>
+
 
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
     </script>
 
-    <!-- JavaScript Semana 5 -->
-    <script src="js/Matias_Zuniga_PFY2201_DOM_Semana5.js"></script>
+    <!-- JavaScript Semana 6 -->
+    <script src="assets/js/Matias_Zuniga_PFY2201_DOM_Semana6.js"></script>
 
 </body>
 
