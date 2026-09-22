@@ -6,6 +6,186 @@ El proyecto corresponde a una tienda ficticia de videojuegos denominada **Tienda
 
 ---
 
+## Semana 6 - Integración de Bootstrap, DOM, eventos y Fetch API
+
+Durante la Semana 6 se integraron y optimizaron las funcionalidades desarrolladas durante las semanas anteriores, consolidando una página eCommerce responsiva con **Bootstrap 5**, manipulación dinámica del **DOM**, eventos de usuario, carga de datos mediante **Fetch API**, búsqueda de productos y carrito de compras.
+
+### Implementaciones principales
+
+- Reorganización de los recursos del proyecto dentro de la carpeta `assets/`.
+- Mantención del diseño responsivo mediante Bootstrap 5.
+- Navbar responsivo con categorías de productos.
+- Incorporación de las categorías `PC` y `Consolas`.
+- Filtrado dinámico del catálogo mediante las categorías del Navbar.
+- Restauración del catálogo completo mediante la opción `Productos`.
+- Incorporación de un formulario de búsqueda de videojuegos.
+- Procesamiento del formulario mediante el evento `submit`.
+- Uso de `preventDefault()` para controlar la búsqueda mediante JavaScript.
+- Carga del catálogo desde un archivo JSON local mediante Fetch API.
+- Incorporación de un indicador de carga durante la solicitud de datos.
+- Generación dinámica de tarjetas de productos mediante manipulación del DOM.
+- Incorporación dinámica de imágenes, nombres, plataformas y precios.
+- Incorporación de botones para agregar productos al carrito.
+- Implementación del evento `click` para agregar productos.
+- Generación dinámica del resumen del carrito.
+- Agrupación de productos repetidos mediante cantidades.
+- Cálculo dinámico del total del carrito.
+- Manejo de errores de carga mediante `.catch()`.
+- Mensaje amigable cuando el catálogo no puede ser cargado.
+- Registro del detalle técnico del error mediante `console.error()`.
+- Organización del código JavaScript mediante funciones reutilizables.
+- Mantención de comentarios descriptivos en las funciones principales.
+- Validación del funcionamiento mediante GitHub Pages.
+
+### Catálogo mediante Fetch API
+
+Los productos utilizados por la aplicación se encuentran almacenados en:
+
+```text
+assets/data/productos.json
+```
+
+La carga del catálogo sigue el siguiente flujo:
+
+```text
+productos.json
+      │
+      ▼
+  Fetch API
+      │
+      ▼
+response.json()
+      │
+      ▼
+productosDisponibles
+      │
+      ▼
+mostrarProductos()
+      │
+      ▼
+     DOM
+```
+
+Mientras se realiza la solicitud se muestra un indicador de carga.
+
+Si el archivo no puede ser obtenido, la aplicación muestra un mensaje amigable al usuario y registra el detalle técnico del error en la consola.
+
+### Búsqueda de productos
+
+Se incorporó un formulario que permite buscar videojuegos por nombre.
+
+El formulario utiliza el evento `submit` y `preventDefault()` para procesar la búsqueda mediante JavaScript sin recargar la página.
+
+```text
+Formulario
+    │
+    ▼
+  submit
+    │
+    ▼
+filter()
+    │
+    ▼
+mostrarProductos()
+```
+
+Cuando no existen coincidencias se informa al usuario mediante un mensaje dinámico.
+
+### Categorías
+
+La barra de navegación incorpora las categorías:
+
+- `PC`
+- `Consolas`
+
+Cada categoría utiliza un evento `click` para filtrar los productos cargados desde el archivo JSON.
+
+La opción `Productos` permite restablecer el catálogo completo.
+
+### Carrito de compras
+
+Cada producto generado dinámicamente incluye un botón:
+
+```text
+Agregar al carrito
+```
+
+Al seleccionar un producto se ejecuta un evento `click` que actualiza el carrito mediante manipulación del DOM.
+
+El flujo implementado es:
+
+```text
+Producto
+    │
+    ▼
+   click
+    │
+    ▼
+agregarAlCarrito()
+    │
+    ▼
+mostrarCarrito()
+    │
+    ├── Producto
+    ├── Cantidad
+    └── Total
+```
+
+Cuando un producto es agregado más de una vez, el carrito agrupa las unidades utilizando una cantidad:
+
+```text
+The Witcher 3: Wild Hunt x2
+```
+
+El total del carrito se recalcula dinámicamente después de cada interacción.
+
+### Diseño responsivo
+
+La interfaz mantiene el sistema responsivo implementado mediante Bootstrap 5.
+
+La distribución del catálogo utiliza:
+
+- `col-12`
+- `col-md-6`
+- `col-lg-4`
+
+Esto permite adaptar los productos según el tamaño de pantalla:
+
+| Resolución | Distribución |
+|---|---|
+| Móvil | 1 producto por fila |
+| Tablet | 2 productos por fila |
+| Escritorio | 3 productos por fila |
+
+El Navbar utiliza el componente colapsable de Bootstrap y muestra un botón hamburguesa en resoluciones menores.
+
+También se validó el comportamiento responsivo del formulario de búsqueda, catálogo, carrito, Carousel y Footer.
+
+---
+
+## Evidencias Semana 6
+
+Se realizaron pruebas funcionales para comprobar las características incorporadas durante la Semana 6.
+
+Las evidencias permiten verificar:
+
+- Funcionamiento del catálogo generado mediante Fetch API.
+- Visualización dinámica de imágenes, nombres y precios.
+- Funcionamiento del formulario de búsqueda.
+- Filtrado de productos por nombre.
+- Filtrado mediante las categorías `PC` y `Consolas`.
+- Funcionamiento del evento `click`.
+- Incorporación de productos al carrito.
+- Agrupación de productos repetidos mediante cantidades.
+- Cálculo dinámico del total.
+- Manejo de errores durante la carga del archivo JSON.
+- Comportamiento responsivo de la aplicación.
+- Funcionamiento del proyecto desplegado mediante GitHub Pages.
+
+Las capturas correspondientes se encuentran almacenadas en la carpeta `evidencias/`.
+
+---
+
 ## Semana 5 - Manipulación del DOM e interactividad con JavaScript
 
 Durante la Semana 5 se incorporó **JavaScript** al proyecto desarrollado durante las semanas anteriores, agregando manipulación dinámica del DOM, eventos de usuario y carga de datos mediante la **Fetch API**.
@@ -58,13 +238,9 @@ El formulario utiliza `preventDefault()` para evitar el comportamiento predeterm
 
 ### Fetch API
 
-Se incorporó un catálogo adicional cuyos datos son obtenidos desde el archivo:
+Se incorporó un catálogo adicional cuyos datos eran obtenidos desde el archivo `productos.json`.
 
-```text
-productos.json
-```
-
-La carga de información sigue el siguiente flujo:
+La carga de información seguía el siguiente flujo:
 
 ```text
 productos.json
@@ -82,9 +258,9 @@ mostrarProductos()
      DOM
 ```
 
-Los datos obtenidos son procesados mediante JavaScript y cada producto es incorporado dinámicamente a la página utilizando elementos creados mediante `createElement()` y `appendChild()`.
+Los datos obtenidos eran procesados mediante JavaScript y cada producto era incorporado dinámicamente a la página utilizando elementos creados mediante `createElement()` y `appendChild()`.
 
-También se implementó manejo de errores mediante `.catch()` en caso de que el recurso no pueda ser cargado.
+También se implementó manejo de errores mediante `.catch()` en caso de que el recurso no pudiera ser cargado.
 
 ---
 
@@ -189,19 +365,22 @@ Las pruebas permiten verificar:
 
 ```text
 frontend/
-├── css/
-│   ├── Matias_Zuniga_PFY2201_CSS_Semana2.css
-│   ├── Matias_Zuniga_PFY2201_CSS_Semana3.css
-│   └── Matias_Zuniga_PFY2201_CSS_Semana4.css
+├── assets/
+│   ├── css/
+│   │   ├── Matias_Zuniga_PFY2201_CSS_Semana2.css
+│   │   ├── Matias_Zuniga_PFY2201_CSS_Semana3.css
+│   │   └── Matias_Zuniga_PFY2201_CSS_Semana4.css
+│   ├── data/
+│   │   └── productos.json
+│   ├── img/
+│   │   ├── masseffect.jpg
+│   │   ├── silksong.jpg
+│   │   └── thewitcher.jpg
+│   └── js/
+│       ├── Matias_Zuniga_PFY2201_DOM_Semana5.js
+│       └── Matias_Zuniga_PFY2201_DOM_Semana6.js
 ├── evidencias/
-│   ├── semana5-dom-evento-click.png
-│   ├── semana5-fetch.png
-│   └── semana5-submit.png
-├── img/
-├── js/
-│   └── Matias_Zuniga_PFY2201_DOM_Semana5.js
 ├── index.html
-├── productos.json
 └── README.md
 ```
 
@@ -225,7 +404,15 @@ El estado funcional de la Semana 5 se identifica mediante:
 s5-entrega
 ```
 
+El estado final de la Semana 6 se identifica mediante:
+
+```text
+s6-entrega
+```
+
 La versión pública del proyecto se mantiene mediante GitHub Pages desde la rama `main`.
+
+---
 
 ## Proyecto publicado
 
