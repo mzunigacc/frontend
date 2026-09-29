@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background-color: #1f1f1f;
+    color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.producto-imagen {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card {
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 576px) {
+    .producto-imagen {
+        height: 240px;
+    }
+}
