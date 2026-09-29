@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 const productos = [
     {
         id: 1,
@@ -5,7 +7,7 @@ const productos = [
         descripcion: "Explora un nuevo reino en una aventura de acción y plataformas.",
         precioNormal: 29990,
         precioOferta: 24990,
-        imagen: "/img/silksong.jpg"
+        imagen: `${base}img/silksong.jpg`
     },
     {
         id: 2,
@@ -13,7 +15,7 @@ const productos = [
         descripcion: "Explora un mundo abierto como Geralt de Rivia, un brujo cazador de monstruos.",
         precioNormal: 39990,
         precioOferta: 29990,
-        imagen: "/img/thewitcher.jpg"
+        imagen: `${base}img/thewitcher.jpg`
     },
     {
         id: 3,
@@ -21,7 +23,7 @@ const productos = [
         descripcion: "Entra a la batalla por el universo en la trilogía de Mass Effect.",
         precioNormal: 44990,
         precioOferta: 34990,
-        imagen: "/img/masseffect.jpg"
+        imagen: `${base}img/masseffect.jpg`
     }
 ];
 
